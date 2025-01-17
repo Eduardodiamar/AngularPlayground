@@ -1,0 +1,10 @@
+<ul>
+    @for (user of users; track user.name) {
+      <li>{{ user.name }} - 
+        <span>{{ user.age >= 18 ? 'Mayor de edad' : 'Menor de edad' }}</span>
+      </li>
+    } @empty {
+      <li>No hay usuarios disponibles.</li>
+    }
+  </ul>
+  
