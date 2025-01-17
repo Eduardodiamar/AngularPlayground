@@ -6,7 +6,8 @@ import { UserService } from '../services/user.service';
   selector: 'app-users',
   imports: [],
   templateUrl: './users.component.html',
-  styleUrl: './users.component.css'
+  styleUrl: './users.component.css',
+  host: { 'hostID': crypto.randomUUID().toString() }
 })
 export class UsersComponent implements OnInit {
   users: any[] = [];

@@ -1,10 +1,14 @@
-<ul>
+<div class="bg-gray-200 rounded p-6 shadow-md w-full max-w-md">
+  <h2 class="text-xl font-bold text-gray-800 mb-4">Usuarios</h2>
+  <ul class="space-y-2">
     @for (user of users; track user.name) {
-      <li>{{ user.name }} - 
-        <span>{{ user.age >= 18 ? 'Mayor de edad' : 'Menor de edad' }}</span>
-      </li>
+    <li class="flex justify-between bg-white rounded p-2 border shadow-sm">
+      <span class="font-medium text-gray-700">{{ user.name }}</span>
+      <span class="font-medium text-gray-700">{{ user.age >= 18 ? 'Mayor de edad' : 'Menor de edad' }}</span>
+    </li>
     } @empty {
-      <li>No hay usuarios disponibles.</li>
+    <li class="text-gray-600 italic">No hay usuarios disponibles.</li>
     }
   </ul>
-  
+</div>
+

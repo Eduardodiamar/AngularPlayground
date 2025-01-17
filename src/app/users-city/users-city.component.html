@@ -1,0 +1,16 @@
+<div class="p-6 bg-white rounded shadow">
+    <h2 class="text-xl font-bold mb-4">Users and Cities</h2>
+    <ul class="space-y-4">
+        @for(user of userCityList; track user.name;){
+        <li class="flex items-center space-x-4">
+            <img [src]="user.avatar" alt="{{ user.name }}" class="w-12 h-12 rounded-full" (error)="onImageError($event)" />
+            <div>
+                <p class="text-lg font-semibold">{{ user.name }}</p>
+                <p class="text-sm text-gray-600">{{ user.city }}, {{ user.country }}</p>
+            </div>
+        </li>
+        } @empty {
+        <li class="text-gray-600 italic">No users available.</li>
+        }
+    </ul>
+</div>

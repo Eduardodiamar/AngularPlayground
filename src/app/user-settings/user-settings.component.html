@@ -1,5 +1,20 @@
-<p>user-settings works!</p>
-<div>
-    <button (click)="updateUserInfo()">Update User Info</button>
+<div class="p-6 bg-white rounded shadow-md border w-96">
+  <p class="text-lg font-bold text-blue-700">User Settings</p>
+  <button (click)="updateUserInfo()"
+    class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:ring focus:ring-blue-300">
+    Update User Info
+  </button>
+  <div class="mt-4">
     <app-user-info [userInfo]="detailView"></app-user-info>
   </div>
+</div>
+
+<h2 class="mt-10 font-bold">CSS</h2>
+<div class="container">
+  <div class="first">
+    <p>Soy el primer div</p>
+  </div>
+  <div class="second">
+    <p>Soy el segundo div</p>
+  </div>
+</div>
