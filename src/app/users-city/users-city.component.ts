@@ -3,6 +3,7 @@ import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-users-city',
+  standalone: true,
   imports: [],
   templateUrl: './users-city.component.html',
   styleUrl: './users-city.component.css'

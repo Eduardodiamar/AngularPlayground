@@ -3,6 +3,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
 
 @Component({
   selector: 'app-user-settings',
+  standalone: true,
   imports: [UserInfoComponent],
   templateUrl: './user-settings.component.html',
   styleUrl: './user-settings.component.css'
@@ -12,5 +13,6 @@ export class UserSettingsComponent {
 
   updateUserInfo(): void {
     this.detailView = { ...this.detailView, age: this.detailView.age + 1 };
+    console.log('User info updated:', this.detailView);
   }
 }
