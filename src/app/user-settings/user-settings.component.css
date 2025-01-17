@@ -1,0 +1,13 @@
+.container {
+    width: fit-content;
+    display: flex;
+    flex-direction: column-reverse; /* Coloca el primer div debajo del segundo */
+  }
+
+  .first {
+    background-color: lightcoral;
+  }
+  
+  .second {
+    background-color: lightblue;
+  }
