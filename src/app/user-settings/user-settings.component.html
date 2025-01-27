@@ -5,8 +5,7 @@
     Update User Info
   </button>
   <div class="mt-4">
-    <app-user-info [userInfo]="detailView"></app-user-info>
-  </div>
+    <app-user-info [userInfo]="detailView" (ageUpdated)="onAgeUpdated($event)"></app-user-info>
 </div>
 
 <h2 class="mt-10 font-bold">CSS</h2>

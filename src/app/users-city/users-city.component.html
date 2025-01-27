@@ -14,3 +14,20 @@
         }
     </ul>
 </div>
+
+<div class="p-6 bg-white rounded shadow">
+    <h2 class="text-xl font-bold mb-4">Users and Cities</h2>
+    <ul class="space-y-4">
+        @if (userCityById) {
+        <li class="flex items-center space-x-4">
+            <div>
+                <p class="text-lg font-semibold">Id: {{ userCityById.id }}</p>
+                <p class="text-lg font-semibold">Name: {{ userCityById.name }}</p>
+                <p class="text-sm text-gray-600">Country: {{ userCityById.country }}, Code: {{ userCityById.countrycode }}</p>
+            </div>
+        </li>
+        } @else {
+        <li class="text-gray-600 italic">No country available.</li>
+        }
+    </ul>
+</div>

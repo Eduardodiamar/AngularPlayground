@@ -19,7 +19,7 @@ export class UsersComponent implements OnInit {
   }
 
   fetchUsers(): void {
-    this._userService.getUsers().subscribe(
+    this._userService.getApiUsers().subscribe(
       (data) => {
         this.users = data;
       },

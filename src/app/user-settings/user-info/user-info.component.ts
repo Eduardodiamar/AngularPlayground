@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-user-info',
@@ -9,6 +9,8 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 })
 export class UserInfoComponent implements OnChanges {
   @Input() userInfo!: { name: string; age: number };
+  @Output() ageUpdated = new EventEmitter<number>();
+
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['userInfo'] && !changes['userInfo'].firstChange) {
@@ -17,5 +19,10 @@ export class UserInfoComponent implements OnChanges {
   }
 
   handleUserInfoChange(newUserInfo: { name: string; age: number }): void {
+  }
+
+  incrementAge() {
+    this.userInfo.age += 1;
+    this.ageUpdated.emit(this.userInfo.age);
   }
 }

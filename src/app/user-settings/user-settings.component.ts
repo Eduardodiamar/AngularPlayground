@@ -15,4 +15,8 @@ export class UserSettingsComponent {
     this.detailView = { ...this.detailView, age: this.detailView.age + 1 };
     console.log('User info updated:', this.detailView);
   }
+
+  onAgeUpdated(newAge: number): void {
+    console.log('New Age:', newAge);
+  }
 }

@@ -12,13 +12,21 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  getUsers(): Observable<any[]> {
+  getApiUsers(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
+  }
+
+  getUsers(): Observable<any[]> {
+    return this.http.get<any[]>(this.usersUrl);
   }
 
   getUsersAndCities() {
     const users$ = this.http.get<any[]>(this.usersUrl);
     const cities$ = this.http.get<any[]>(this.citiesUrl);
     return forkJoin([users$, cities$]);
+  }
+
+  getCitiesByUserId(userId: string): Observable<any> {
+    return this.http.get<any>(`${this.citiesUrl}/${userId}`);
   }
 }

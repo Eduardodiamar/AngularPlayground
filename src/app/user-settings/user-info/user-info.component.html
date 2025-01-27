@@ -1,4 +1,6 @@
 <div class="bg-gray-100 border rounded p-4 shadow-md">
+  <button (click)="incrementAge()" 
+    class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 focus:ring focus:ring-green-300">Increment Age</button>
   <p class="text-gray-700 font-medium">Name: <span class="font-semibold">{{ userInfo.name }}</span></p>
   <p class="text-gray-700 font-medium">Age: <span class="font-semibold">{{ userInfo.age }}</span></p>
 </div>
